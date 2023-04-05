@@ -11,7 +11,14 @@ function Contact() {
         <p>Stay in touch with me</p>
         <h2>Quick Contact</h2>
         </div>
-        <div className="contact__data"></div>
+        <div className="contact__data">
+          <div className="contact_data_description">
+            <h4>Just to say hi !!!</h4>
+            <p>
+              If you have any questions simply use the following contact details.
+            </p>
+          </div>
+        </div>
       </div>     
       </Section>
   )
