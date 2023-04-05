@@ -17,6 +17,12 @@ function Contact() {
             <p>
               If you have any questions simply use the following contact details.
             </p>
+            <p>
+              Business Owners to take their Online Presence to the next level. We are in the business of Bulk SMS, Digital Marketing.
+            </p>
+            <div>
+              <p></p>
+            </div>
           </div>
         </div>
       </div>     
