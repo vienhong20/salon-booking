@@ -3,10 +3,18 @@ import styled from "styled-components";
 import logo from "assets/logo.png";
 import { GiHamBurgerMenu } from "react-icons/gi";
 import { MdClose } from 'react-icons/md';
+import { useScroll } from 'components/useScroll';
+import { motion } from "framer-motion";
+import { navAnimation } from "animation";
 
 function Navbar() {
   const [ isNavOpen, setIsNavOpen ] = useState(false);
-  return <Nav>
+  const [ element, controls] = useScroll();
+  return <Nav ref={element}
+  variants={navAnimation}
+  transition={{ delay: 0.1 }}
+  animate={controls}
+  >
     <div className="brand_container">
       <a href="#" className='brand'>
         <img src={logo} alt="logo" />
@@ -35,7 +43,7 @@ function Navbar() {
   </Nav>
 }
 
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   margin: 0 2rem;
