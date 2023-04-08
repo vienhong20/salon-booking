@@ -14,6 +14,7 @@ function Navbar() {
   variants={navAnimation}
   transition={{ delay: 0.1 }}
   animate={controls}
+  state={isNavOpen ? 1 : 0}
   >
     <div className="brand_container">
       <a href="#" className='brand'>
