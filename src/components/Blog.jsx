@@ -5,7 +5,7 @@ import home from "assets/home.png";
 import Title from './Title';
 import { useScroll } from "components/useScroll";
 import { motion } from "framer-motion";
-import { blogsAnimation, portfolioAnimations } from "animation";
+import { blogsAnimation } from "animation";
 
 function Blog() {
   const [element, controls] = useScroll();
