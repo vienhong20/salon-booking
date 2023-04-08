@@ -3,8 +3,12 @@ import styled from "styled-components";
 import play from "assets/play.png";
 import home from "assets/home.png";
 import Title from './Title';
+import { useScroll } from "components/useScroll";
+import { motion } from "framer-motion";
+import { blogsAnimation, portfolioAnimations } from "animation";
 
 function Blog() {
+  const [element, controls] = useScroll();
   const blogsData = [
     {
       title:"PARLOUR JOURNAL",
@@ -22,12 +26,20 @@ function Blog() {
       description: "Keep your body and mind it pure and clean for the soul to reside in. Our Spa Offer yoga classes in areas. creates real benefits for the person's health.",
     },
   ]
-  return <Section id="blog">
+  return <Section id="blog" ref={element}>
       <Title value="Blog" />
       <div className="blogs">
         {blogsData.map(({ title, type, description }) => {
           return (
-            <div className="blog">
+            <motion.div className="blog"
+              variants={blogsAnimation}
+              animate={controls}
+              transition={{
+                delay: 0.03,
+                type: "tween",
+                duration: 0.8,
+              }}
+            >
               <div className="image"></div>
               <div className="title">
                 <h3>{title}</h3>  
@@ -40,7 +52,7 @@ function Blog() {
                   <img src={play} alt="Play" />
                   <span>Read More</span>  
                 </div>
-            </div>
+            </motion.div>
           )
         })}
       </div>
