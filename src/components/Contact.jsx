@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Title from './Title';
 import { motion } from "framer-motion";
 import { useScroll } from "components/useScroll";
-import { contactAnimations } from "animation";
+import { contactAnimation } from "animation";
 
 function Contact() {
   const [element, controls] = useScroll();
@@ -11,7 +11,7 @@ function Contact() {
     <Section id="contact" ref={element}>
       <Title value="contact" />
       <motion.div className="contact"
-      variants={contactAnimations}
+      variants={contactAnimation}
       animate={controls}
       transition={{
         delay: 0.03,
