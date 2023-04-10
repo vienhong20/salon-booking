@@ -33,4 +33,13 @@ export const blogsAnimation = {
     show: { y: 0, opacity: 1 },
 };
 
+export const videoAnimations = {
+    hidden: { scale: 0, opacity: 0 },
+    show: { scale: 1, opacity: 1 },
+};
+
+export const pricingAnimation = {
+    hidden: { y: 200, opacity: 0 },
+    show: { y: 0, opacity: 1 },
+};
 
