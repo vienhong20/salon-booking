@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import loadmore from "assets/loadmore.png";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useScroll } from "components/useScroll";
+import { testimonialsAnimations } from "animation";
 
 function Testimonials() {
+  const [element, controls] = useScroll();
   const [selected, setSelected] = useState(0);
   const testimonials = [
     {
@@ -25,9 +29,17 @@ function Testimonials() {
     },
   ];
   return (
-    <Section>
+    <Section ref={element}>
       <div className="container">
-        <div className="testimonials">
+        <motion.div className="testimonials"
+        variants={testimonialsAnimations}
+        animate={controls}
+        transition={{
+          delay: 0.03,
+          type: "tween",
+          duration: 0.8,
+        }}
+        >
           {
             testimonials.map(({ designation, name, review}, index)=> {
               return (
@@ -48,8 +60,16 @@ function Testimonials() {
               );
             })
           }
-        </div>
-        <div className="controls">
+        </motion.div>
+        <motion.div className="controls"
+        variants={testimonialsAnimations}
+        animate={controls}
+        transition={{
+          delay: 0.03,
+          type: "tween",
+          duration: 0.8,
+        }}
+        >
           <button 
               className={selected === 0 ? "active" : ""} 
               onClick={() => { 
@@ -69,7 +89,7 @@ function Testimonials() {
               }}>
           </button>
 
-        </div>
+        </motion.div>
       </div>
     </Section>
   )

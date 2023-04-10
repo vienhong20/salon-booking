@@ -43,3 +43,12 @@ export const pricingAnimation = {
     show: { y: 0, opacity: 1 },
 };
 
+export const testimonialsAnimations = {
+    hidden: { scale: 0, opacity: 0 },
+    show: { scale: 1, opacity: 1 },
+};
+
+export const contactAnimation = {
+    hidden: { y: 200, opacity: 0 },
+    show: { y: 0, opacity: 1 },
+};
