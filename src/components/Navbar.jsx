@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import logo from "assets/logo.png";
-import { GiHamBurgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { useScroll } from "components/useScroll";
 import { motion } from "framer-motion";
@@ -20,7 +20,18 @@ function Navbar() {
       <a href="#" className='brand'>
         <img src={logo} alt="logo" />
       </a>
-      <div className="toggle"></div>
+      <div className="toggle">
+        {isNavOpen ? (
+          <MdClose onClick={ () => setIsNavOpen(false)} />
+        ) : (
+          <GiHamburgerMenu
+          onClick={ (e) => {
+            e.stopPropagation();
+            setIsNavOpen(true);
+          }}
+          />
+        )}
+      </div>
     </div>
     <div className="links">
       <ul>
