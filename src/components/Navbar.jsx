@@ -33,7 +33,7 @@ function Navbar() {
         )}
       </div>
     </div>
-    <div className="links">
+    <div className={`links ${isNavOpen ? "show" : ""}`}>
       <ul>
         <li className="active">
           <a href="#home">Home</a>
