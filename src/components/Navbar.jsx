@@ -77,6 +77,43 @@ const Nav = styled(motion.nav)`
       }
     }
   }
+  @media screen and (min-width: 280px) and (max-width:1080) {
+    margin: 0;
+    position: relative;
+    .brand__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .toggle {
+        padding-right: 1rem;
+        display: block;
+        z-index: 1;
+      }
+    }
+    .show {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    .links {
+      position: absolute;
+      overflow-x: hidden;
+      top: 0,
+      right: 0;
+      width: ${({ state }) => (state ? "100%" : "0%")};
+      height: 100vh;
+      background-color: var(--secondary-color);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s ease-in-out;
+      ul {
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        justify-content: center;
+      }
+    }
+  }  
 `;
 
 export default Navbar
