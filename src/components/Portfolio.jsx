@@ -115,7 +115,7 @@ background-color: var(--secondary-color);
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     .grid {
-      padding: 2rem 4rem;
+      padding: 0;
       grid-template-columns: 1fr;
       grid-template-areas:
       "one"

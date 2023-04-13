@@ -95,6 +95,10 @@ position: relative;
       height: 6rem;
     }
   }
-}`;
+}
+@media screen and (min-width: 280px) and (max-width: 1080px) { 
+  padding: 5rem 2 rem
+}
+`;
 
 export default Milestones;
