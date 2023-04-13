@@ -13,17 +13,17 @@ function Services() {
   const [ element, controls] = useScroll();
   const data = [
     {
-      type: "Blowout",
+      type: "Manicure",
       text: "Shampoo and blow dry. If you are looking to celebrate your special day with us, please note we only have 3 stylists scheduled",
       image: service1,
     },
     {
-      type: "Olaplex",
+      type: "Pedicure",
       text: "Hair treatment helping keep coloured hair healthy from the inside If you are looking to celebrate your special day with us.",
       image: service2,
     },
     {
-      type: "Retouch",
+      type: "Waxing",
       text: "We bring to you a bouquet of services to remain worry free about your looks. We have made effortless beauty equipment and products.",
       image: service3,
     },
