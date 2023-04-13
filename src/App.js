@@ -7,6 +7,7 @@ import Portfolio from 'components/Portfolio';
 import Pricing from 'components/Pricing';
 import ScrollToTop from 'components/ScrollToTop';
 import Services from 'components/Services';
+import Skills from 'components/Skills';
 import Testimonials from 'components/Testimonials';
 import Video from 'components/Video';
 import { motion } from 'framer-motion';
@@ -24,6 +25,7 @@ function App() {
       <Video />
       <Pricing />
       <Testimonials />
+      <Skills />
       <Contact />
       <Footer />
       <ScrollToTop />
