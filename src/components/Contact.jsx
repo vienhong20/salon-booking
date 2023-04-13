@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Title from './Title';
 import { motion } from "framer-motion";
-import { useScroll } from "components/useScroll";
+import { useScroll } from "./useScroll";
 import { contactAnimation } from "animation";
 
 function Contact() {
@@ -20,42 +20,42 @@ function Contact() {
       }}
       >
         <div className="contact__title">
-        <p>Stay in touch with me</p>
-        <h2>Quick Contact</h2>
+          <p>Stay in touch with me </p>
+          <h2>Quick Contact</h2>
         </div>
         <div className="contact__data">
-          <div className="contact_data_description">
-            <h4>Just to say hi !!!</h4>
+          <div className="contact__data__description">
+            <h4>Just to say hi !!</h4>
             <p>
               If you have any questions simply use the following contact details.
             </p>
             <p>
-              Business Owners to take their Online Presence to the next level. We are in the business of Bulk SMS, Digital Marketing.
+              Business Owners to take their Online Presence 
+              to the next level. We are in the business of Bulk SMS, Digital Marketing.
             </p>
             <div>
               <p>
-                <strong>Address:</strong>8888 Flyover Road,
+                <strong>Address:</strong> 33, Flyover Road,
               </p>
               <p>
-                <strong>Email:</strong>blommm@gmail.com,
+                <strong>Email:</strong> blossoms@gmail.com
               </p>
               <p>
-                <strong>Website:</strong>bloommmm.com,
+                <strong>Website:</strong> www.blossoms.com
               </p>
             </div>
           </div>
           <div className="contact__data__form">
-            <input type="text" placeholder="name" />
-            <input type="email" placeholder="email" />
-            <textarea placeholder="message"></textarea>
+            <input type="text" placeholder='name' />
+            <input type="email" placeholder='email' />
+            <textarea placeholder='message'></textarea>
             <button>Send Message</button>
-          </div>  
+          </div>
         </div>
-      </motion.div>     
-      </Section>
+      </motion.div>
+    </Section>
   )
 }
-
 
 const Section = styled.section`
 min-height: 100vh;
@@ -159,34 +159,6 @@ min-height: 100vh;
         text-align: left;
       }
       &__form {
-        button {
-          height: 6rem;
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 280px) and (max-width: 1080px) { 
-  .contact {
-    margin: 1rem;
-    padding: 0 1rem;
-    &__title {
-      margin: 0;
-      text-align: center;
-      p {
-        font-size: 0.8rem;
-      }
-      h2 {
-        font-size: 1.3rem;
-      }
-    }
-    &__data {
-      grid-template-columns: 1fr;
-      margin: 0;
-      p {
-        text-align: left;
-      }
-      &__form{
         button {
           height: 6rem;
         }

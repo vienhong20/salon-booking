@@ -7,50 +7,54 @@ import { useScroll } from "components/useScroll";
 import { motion } from "framer-motion";
 import { navAnimation } from "animation";
 
+
 function Navbar() {
-  const [ isNavOpen, setIsNavOpen ] = useState(false);
-  const [ element, controls] = useScroll();
+  const [isNavOpen,setIsNavOpen] = useState(false);
+  const [element, controls] = useScroll();
   return <Nav ref={element}
   variants={navAnimation}
   transition={{ delay: 0.1 }}
-  animate={controls}
+  animate={controls} 
   state={isNavOpen ? 1 : 0}
   >
     <div className="brand__container">
       <a href="#" className='brand'>
         <img src={logo} alt="logo" />
-      </a>
+      </a>  
       <div className="toggle">
         {isNavOpen ? (
           <MdClose onClick={ () => setIsNavOpen(false)} />
         ) : (
           <GiHamburgerMenu
-          onClick={ (e) => {
-            e.stopPropagation();
-            setIsNavOpen(true);
-          }}
-          />
+            onClick={ (e) => {
+              e.stopPropagation();
+              setIsNavOpen(true);
+            }}
+            />
         )}
       </div>
     </div>
     <div className={`links ${isNavOpen ? "show" : ""}`}>
-      <ul>
+    <ul>
         <li className="active">
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#service">Services</a>
-        </li>
-        <li>
-          <a href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a href="#blog">Blog</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
     </div>
   </Nav>
 }
@@ -61,7 +65,7 @@ const Nav = styled(motion.nav)`
   margin: 0 2rem;
   color: #fff;
   padding-top: 2rem;
-  .brand_container {
+  .brand__container {
     margin: 0 2rem;
     .toggle {
       display: none;
@@ -82,13 +86,13 @@ const Nav = styled(motion.nav)`
           color: #fff;
           text-decoration: none;
           font-weight: 400;
-          font-size: 0.9rem,
+          font-size: 0.9rem;
           text-transform: uppercase;
         }
       }
     }
   }
-  @media screen and (min-width: 280px) and (max-width:1080) {
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
     margin: 0;
     position: relative;
     .brand__container {
@@ -109,7 +113,7 @@ const Nav = styled(motion.nav)`
     .links {
       position: absolute;
       overflow-x: hidden;
-      top: 0,
+      top: 0;
       right: 0;
       width: ${({ state }) => (state ? "100%" : "0%")};
       height: 100vh;
@@ -124,7 +128,7 @@ const Nav = styled(motion.nav)`
         justify-content: center;
       }
     }
-  }  
+  }
 `;
 
-export default Navbar
+export default Navbar;

@@ -5,13 +5,13 @@ export const homeAnimation = {
 
 export const homeInfoAnimation = {
     hidden: { x: 100, opacity: 0 },
-    show: { x:0, opacity: 1 },
+    show: { x: 0, opacity: 1 },
 };
 
 export const navAnimation = {
     hidden: { y: -20, opacity: 0 },
     show: { y: 1, opacity: 1 },
-};
+}
 
 export const servicesAnimations = {
     hidden: { y: 200, opacity: 0 },
@@ -46,6 +46,11 @@ export const pricingAnimation = {
 export const testimonialsAnimations = {
     hidden: { scale: 0, opacity: 0 },
     show: { scale: 1, opacity: 1 },
+};
+
+export const skillsBarAnimation = {
+    hidden: { y: 0, opacity: 0 },
+    show: { y: 1, opacity: 1 },
 };
 
 export const contactAnimation = {

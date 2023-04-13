@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useScroll } from "components/useScroll";
 import { videoAnimations } from "animation";
+import { useScroll } from "./useScroll";
 
 function Video() {
   const [element, controls] = useScroll();
@@ -28,9 +28,8 @@ function Video() {
           allowFullScreen
         ></iframe>
       </motion.div>
-
     </Section>
-  )
+  );
 }
 
 const Section = styled.section`
@@ -54,6 +53,5 @@ position: relative;
   }
 }
 `;
-
 
 export default Video

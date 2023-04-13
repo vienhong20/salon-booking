@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import loadmore from "assets/loadmore.png";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useScroll } from "components/useScroll";
+import { useScroll } from "./useScroll";
 import { testimonialsAnimations } from "animation";
 
 function Testimonials() {
@@ -70,25 +70,24 @@ function Testimonials() {
           duration: 0.8,
         }}
         >
-          <button 
-              className={selected === 0 ? "active" : ""} 
-              onClick={() => { 
+        <button
+            className={selected === 0 ? "active" : ""}
+            onClick={() => {
               setSelected(0);
-              }}>
-          </button>
-          <button 
-              className={selected === 1 ? "active" : ""} 
-              onClick={() => { 
+            }}>
+        </button>
+        <button
+            className={selected === 1 ? "active" : ""}
+            onClick={() => {
               setSelected(1);
-              }}>
-          </button>
-          <button 
-              className={selected === 2 ? "active" : ""} 
-              onClick={() => { 
+            }}>
+        </button>
+        <button
+            className={selected === 2 ? "active" : ""}
+            onClick={() => {
               setSelected(2);
-              }}>
-          </button>
-
+            }}>
+        </button>
         </motion.div>
       </div>
     </Section>

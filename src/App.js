@@ -1,14 +1,14 @@
-import Home from 'components/Home';
-import Services from 'components/Services';
-import Portfolio from 'components/Portfolio';
-import Milestones from 'components/Milestones';
 import Blog from 'components/Blog';
-import Video from 'components/Video';
-import Pricing from 'components/Pricing';
-import Testimonials from 'components/Testimonials';
 import Contact from 'components/Contact';
 import Footer from 'components/Footer';
+import Home from 'components/Home';
+import Milestones from 'components/Milestones';
+import Portfolio from 'components/Portfolio';
+import Pricing from 'components/Pricing';
 import ScrollToTop from 'components/ScrollToTop';
+import Services from 'components/Services';
+import Testimonials from 'components/Testimonials';
+import Video from 'components/Video';
 import { motion } from 'framer-motion';
 import React from 'react';
 

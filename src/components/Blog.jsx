@@ -3,8 +3,8 @@ import styled from "styled-components";
 import play from "assets/play.png";
 import home from "assets/home.png";
 import Title from './Title';
-import { useScroll } from "components/useScroll";
 import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
 import { blogsAnimation } from "animation";
 
 function Blog() {
@@ -27,8 +27,8 @@ function Blog() {
     },
   ]
   return <Section id="blog" ref={element}>
-      <Title value="Blog" />
-      <div className="blogs">
+    <Title value="Blog" />
+    <div className="blogs">
         {blogsData.map(({ title, type, description }) => {
           return (
             <motion.div className="blog"
@@ -55,8 +55,8 @@ function Blog() {
             </motion.div>
           )
         })}
-      </div>
-  </Section>
+    </div>
+    </Section>
 }
 
 const Section = styled.section`

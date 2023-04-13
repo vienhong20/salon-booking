@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import styled from "styled-components";
 import Title from './Title';
 import pricing1 from "assets/pricing1.png";
 import pricing2 from "assets/pricing2.png";
 import play from "assets/play.png";
 import { motion } from "framer-motion";
-import { useScroll } from "components/useScroll";
+import { useScroll } from "./useScroll";
 import { pricingAnimation } from "animation";
 
 function Pricing() {
@@ -23,7 +23,7 @@ function Pricing() {
       name: "Expert",
       price: 77,
     },
-  ]
+  ];
 
   const data = [
     {
@@ -67,6 +67,7 @@ function Pricing() {
       type: "Expert",
     },
   ]
+
   return (
     <Section ref={element}>
       <Title value="pricing" />
@@ -103,7 +104,7 @@ function Pricing() {
                   {data.map(({ value, type }, index2) => {
                     return (
                       <Fragment key={index2}>
-                       {name === "Basic" ? (
+                        {name === "Basic" ? (
                           type === name ? (
                             <li>{value}</li>
                           ) : (
@@ -120,14 +121,13 @@ function Pricing() {
                         )}
                       </Fragment>
                     );
-                })}
-                </ul> 
+                  })}
+                </ul>
                 <div className="pricing__plan__content__actions">
                   <span>Order Now</span>
                   <img src={play} alt="Order Now" />
                 </div>
               </div>
-              
             </motion.div>
           )
         })}
@@ -283,51 +283,5 @@ overflow: hidden;
     }
   }
 }
-@media screen and (min-width: 280px) and (max-width: 1080px) { 
-  padding: 1rem;
-  background-color: var(--secondary-color);
-  .pricing__title {
-    margin: 0;
-    padding: 0 2rem;
-    text-align: center;
-    h2 {
-      font-size: 1.3rem;
-
-    }
-  }
-  .background {
-    display: none;
-  }
-  .pricing {
-    grid-template-columns: 1fr;
-    padding: 1 rem;
-    gap: 4rem;
-    &__plan {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      &__name {
-        height: 10rem;
-        width: 10rem;
-        h2 {
-          font-size: 1.5rem;
-        }
-        &__price {
-          p{
-            font-size: 3rem;
-          }
-        }
-      }
-      &:nth-child(2) {
-        .pricing__plan__content {
-          padding: 0rem;
-          border: none;
-        }
-      }  
-    }
-  }
-}
 `;
-
 export default Pricing
